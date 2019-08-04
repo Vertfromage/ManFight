@@ -9,6 +9,7 @@ public class ManFight {
     public ManFight(Man goodMan, Man badMan) {
         this.goodMan = goodMan;
         this.badMan = badMan;
+        startFight();
     }
 
     public Man getGoodMan() {
@@ -19,7 +20,7 @@ public class ManFight {
         return badMan;
     }
 
-    public void StartFight() {
+    public void startFight() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the fight club!");
         System.out.println("You may punch, kick, or headbutt!");
@@ -57,8 +58,12 @@ public class ManFight {
                 System.out.println("Not valid input, you skip your turn");
             }
         }
-        this.getBadMan().isDead();
-        this.getGoodMan().isDead();
+        if(this.getBadMan().isDead()){
+            System.out.println(this.getBadMan().getName()+" is Dead!");
+        }
+        if(this.getGoodMan().isDead()){
+            System.out.println(this.getGoodMan().getName()+" is Dead!");
+        }
         System.out.println("Game over!");
         scanner.close();
     }
@@ -68,24 +73,22 @@ public class ManFight {
             if (manAttacking.kick()) {
                 manBeingAttacked.isInjured(move);
                 return true;
-            } else {
-                return false;
             }
+            return false;
+
         } else if (move.equals("punch")) {
             if (manAttacking.punch()) {
                 manBeingAttacked.isInjured(move);
                 return true;
-            } else {
-                return false;
             }
+            return false;
 
         } else if (move.equals("headbutt")) {
             if (manAttacking.headbutt()) {
                 manBeingAttacked.isInjured(move);
                 return true;
-            } else {
-                return false;
             }
+            return false;
 
         } else {
             System.out.println(move + " is not a valid move you skip your turn doofus!");
