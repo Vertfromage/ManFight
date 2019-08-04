@@ -73,9 +73,9 @@ public class Man {
         }else if (attack.equals("headbutt")&& this.hasBalls()) {
             System.out.println(this.getName()+": 'Oww you got me in the Gronk Nuts!'");
             this.balls = false;
+        }else{
+            System.out.println("'I'm in too much pain already to be bothered by your feeble attempts!'");
         }
-        System.out.println("'I'm in too much pain already to be bothered by your feeble attempts!'");
-
     }
 
     public boolean isDead(){
