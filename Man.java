@@ -25,63 +25,64 @@ public class Man {
     public boolean hasArms() {
         if (this.arms > 0) {
             return true;
-        } else return false;
+        }
+        return false;
     }
 
     public boolean hasLegs() {
         if (this.legs > 0) {
             return true;
-        } else return false;
+        }
+        return false;
     }
 
     public boolean punch() {
         if (this.hasArms()) {
             return true;
-        } else {
-            System.out.println(this.getName()+": I have no stinking arms!");
-            return false;
         }
+        System.out.println(this.getName()+": I have no stinking arms!");
+        return false;
+
     }
 
     public boolean kick() {
         if (this.hasLegs()) {
             return true;
-        } else {
-            System.out.println(this.getName()+": I have no stinking legs!");
-            return false;
         }
+        System.out.println(this.getName()+": I have no stinking legs!");
+        return false;
+
     }
 
     public boolean headbutt() {
         if (this.hasBalls()) {
             return true;
-        } else {
-            System.out.println(this.getName()+": Ow my poor Gronk nuts, I've lost my nerve!");
-            return false;
         }
+        System.out.println(this.getName()+": Ow my poor Gronk nuts, I've lost my nerve!");
+        return false;
+
     }
 
     public void isInjured(String attack){
-        if (attack.equals("punch")&& this.arms>0) {
+        if (attack.equals("punch")&& this.hasArms()) {
             System.out.println(this.getName()+": 'Oww you broke me arm!'");
-            this.arms -= 1;
-        }else if (attack.equals("kick")&& this.legs>0) {
+            this.arms--;
+        }else if (attack.equals("kick")&& this.hasLegs()) {
             System.out.println(this.getName()+": 'Oww you broke me leg!'");
-            this.legs -= 1;
+            this.legs--;
         }else if (attack.equals("headbutt")&& this.hasBalls()) {
             System.out.println(this.getName()+": 'Oww you got me in the Gronk Nuts!'");
             this.balls = false;
-        }else{
-            System.out.println("'I'm in too much pain already to be bothered by your feeble attempts!'");
         }
+        System.out.println("'I'm in too much pain already to be bothered by your feeble attempts!'");
+
     }
 
     public boolean isDead(){
         if (this.hasBalls()||this.hasArms()||this.hasLegs()){
             return false;
-        }else{
-            System.out.println(this.getName()+" is Dead!");
-            return true;
         }
+        return true;
+
     }
 }
