@@ -7,7 +7,5 @@ public class Main {
 	Man Hercules = new Man("Hercules");
 
 	ManFight mikeAndHercules = new ManFight(Mike,Hercules);
-
-	mikeAndHercules.StartFight();
     }
 }
