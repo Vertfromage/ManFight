@@ -36,8 +36,9 @@ public class Man {
         return false;
     }
 
-    public boolean punch() {
+    public boolean punch(Man manBeingAttacked) {
         if (this.hasArms()) {
+            manBeingAttacked.isInjured("punch");
             return true;
         }
         System.out.println(this.getName()+": I have no stinking arms!");
@@ -45,21 +46,18 @@ public class Man {
 
     }
 
-    public boolean kick() {
+    public boolean kick(Man manBeingAttacked) {
         if (this.hasLegs()) {
+            manBeingAttacked.isInjured("kick");
             return true;
         }
         System.out.println(this.getName()+": I have no stinking legs!");
         return false;
-
     }
 
-    public boolean headbutt() {
-        if (this.hasBalls()) {
-            return true;
-        }
-        System.out.println(this.getName()+": Ow my poor Gronk nuts, I've lost my nerve!");
-        return false;
+    public boolean headbutt(Man manBeingAttacked) {
+        manBeingAttacked.isInjured("headbutt");
+                return true;
 
     }
 

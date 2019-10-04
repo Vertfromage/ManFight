@@ -69,28 +69,22 @@ public class ManFight {
     }
 
     public boolean DoMove(String move, Man manAttacking, Man manBeingAttacked) {
-        if (move.equals("kick")) {
-            if (manAttacking.kick()) {
-                manBeingAttacked.isInjured(move);
-                return true;
-            }
-            return false;
+        if (move.equals("kick"))
+           return manAttacking.kick(manBeingAttacked);
 
-        } else if (move.equals("punch")) {
-            if (manAttacking.punch()) {
-                manBeingAttacked.isInjured(move);
-                return true;
-            }
-            return false;
 
-        } else if (move.equals("headbutt")) {
-            if (manAttacking.headbutt()) {
-                manBeingAttacked.isInjured(move);
-                return true;
-            }
-            return false;
+        else if (move.equals("punch"))
+            return manAttacking.punch(manBeingAttacked);
 
-        } else {
+
+
+
+         else if (move.equals("headbutt"))
+             return manAttacking.headbutt(manBeingAttacked);
+
+
+
+         else {
             System.out.println(move + " is not a valid move you skip your turn doofus!");
             return true;
         }
