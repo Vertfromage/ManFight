@@ -25,6 +25,10 @@ public class ManFight {
         System.out.println("Welcome to the fight club!");
         System.out.println("You may punch, kick, or headbutt!");
         System.out.println("Type 'quit' to exit.");
+        System.out.println("-------------------------------------------------------");
+        System.out.println(this.getGoodMan().getName() + " the " + this.getGoodMan().getManClass() + " VS "
+            + this.getBadMan().getName() + " the " + this.getBadMan().getManClass());
+        System.out.println("-------------------------------------------------------");
 
         while (!this.getBadMan().isDead() && !this.getGoodMan().isDead()) {
             //Ask first player what he wants to do;
@@ -69,24 +73,43 @@ public class ManFight {
     }
 
     public boolean DoMove(String move, Man manAttacking, Man manBeingAttacked) {
+        if(manAttacking.getManClass().equals("Magician")){
+            move = DoMoveAsMagician(move, manAttacking);
+        }
         if (move.equals("kick"))
            return manAttacking.kick(manBeingAttacked);
-
-
         else if (move.equals("punch"))
             return manAttacking.punch(manBeingAttacked);
-
-
-
-
-         else if (move.equals("headbutt"))
-             return manAttacking.headbutt(manBeingAttacked);
-
-
-
-         else {
+        else if (move.equals("headbutt"))
+            return manAttacking.headbutt(manBeingAttacked);
+        else if (move.equals("ilostmagicwand"))
+            return true;
+        else {
             System.out.println(move + " is not a valid move you skip your turn doofus!");
             return true;
+        }
+    }
+
+    public String DoMoveAsMagician(String move, Man manAttacking){
+        if(manAttacking.hasMagicWand()){
+            System.out.println(manAttacking.getName() + " is casting " + move + "!");
+            int randomNum = (int)(Math.random() * ((2 - 0) + 2)) + 0;
+            switch(randomNum){
+                case 0:
+                    move = "kick";
+                    break;
+                case 1:
+                    move = "punch";
+                    break;
+                case 2:
+                    move = "headbutt";
+                    break;
+            }
+            System.out.println("Oh! " + manAttacking.getName() + " is casting " + move + " magic!");
+            return move;
+        } else {
+            System.out.println(manAttacking.getName()+": 'I lost my magic wand. so I can't fight you.'");
+            return move = "ilostmagicwand";
         }
     }
 }
