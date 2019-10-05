@@ -5,5 +5,7 @@ This was made to amuse my non-techie husband and make him pay attention to my ex
 I managed to get his attention for a minute so, win.  I am just a beginner, part way through Tim Bulchalka's course, https://www.udemy.com/java-the-complete-java-developer-course/, so be kind.  
 
 Updates during Hacktoberfest, contributors:
-RitikRawat
-melascuco
+
+- RitikRawat
+- melascuco
+- saguins
