@@ -68,6 +68,10 @@ public class Man {
         }
         return false;
     }
+    
+    /************
+     * ATTACKS
+     *********** */
 
     public boolean punch(Man manBeingAttacked) {
         if (this.hasArms() || this.getManClass().equals("Magician")) {
@@ -76,7 +80,6 @@ public class Man {
         }
         System.out.println(this.getName() + ": I have no stinking arms!");
         return false;
-
     }
 
     public boolean kick(Man manBeingAttacked) {
@@ -135,7 +138,6 @@ public class Man {
             System.out.println(this.getName()+": 'Oh no! my magic wand is broken!'");
             this.hasMagicWand = false;
             System.out.println(this.getName()+": 'My time has come.'");
-            return;
         }
     }
 
