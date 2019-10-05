@@ -9,7 +9,6 @@ public class ManFight {
     public ManFight(Man goodMan, Man badMan) {
         this.goodMan = goodMan;
         this.badMan = badMan;
-        startFight();
     }
 
     public Man getGoodMan() {
