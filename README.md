@@ -9,3 +9,5 @@ Updates during Hacktoberfest, contributors:
 - RitikRawat
 - melascuco
 - saguins
+- SinSentido
+
