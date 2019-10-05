@@ -5,6 +5,7 @@ public class Man {
     private int arms;
     private int legs;
     private boolean balls;
+    private boolean scareStatus;
     private String name;
 
     private String manClass;
@@ -14,6 +15,7 @@ public class Man {
         this.arms = 2;
         this.legs = 2;
         this.balls = true;
+        this.scareStatus = false;
         this.name = name;
         this.manClass = "Fighter";
     }
@@ -27,6 +29,14 @@ public class Man {
         if (this.manClass.equals("Magician")) {
             this.hasMagicWand = true;
         }
+    }
+
+    public boolean isScare() {
+        return scareStatus;
+    }
+
+    public void setScare(boolean scareStatus) {
+        this.scareStatus = scareStatus;
     }
 
     public boolean hasBalls() {
@@ -81,7 +91,11 @@ public class Man {
     public boolean headbutt(Man manBeingAttacked) {
         manBeingAttacked.isInjured("headbutt");
         return true;
+    }
 
+    public boolean roar(Man manBeingAttacked) {
+        manBeingAttacked.isInjured("roar");
+        return true;
     }
 
     public void isInjured(String attack) {
@@ -98,6 +112,16 @@ public class Man {
         } else if (attack.equals("headbutt") && this.hasBalls()) {
             System.out.println(this.getName() + ": 'Oww you got me in the Gronk Nuts!'");
             this.balls = false;
+        } else if (attack.equals("roar")) {
+            int randomNum = (int)(Math.random() * ((1 - 0) + 1)) + 0;
+            if(randomNum == 0){
+                System.out.println(this.getName()+": 'What?'");
+                System.out.println("Nothing happen!");
+            } else {
+                System.out.println(this.getName() + ": 'That's scary!'");
+                System.out.println(this.getName()+" is scare from your roar!!");
+                this.scareStatus = true;
+            }
         } else {
             System.out.println("'I'm in too much pain already to be bothered by your feeble attempts!'");
         }
