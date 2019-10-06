@@ -11,3 +11,17 @@ Updates during Hacktoberfest, contributors:
 - saguins
 - SinSentido
 
+## How to run
+
+This project uses [Gradle](https://gradle.org) as its build system.
+Simply run:
+
+```bash
+./gradlew run
+```
+
+or on Windows:
+
+```
+gradlew.bat run
+```
