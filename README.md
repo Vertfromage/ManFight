@@ -23,6 +23,7 @@ Updates during Hacktoberfest, contributors:
 - barbaraips
 - ashatch
 - DGKSK8LIFE
+- AlexDvorak 
 
 ## How to run
 
