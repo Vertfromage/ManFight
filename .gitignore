@@ -7,3 +7,5 @@
 *.log
 .classpath
 .project
+/.gradle
+/build

@@ -1,0 +1,31 @@
+plugins {
+    id "application"
+}
+
+apply plugin : "java"
+
+ext {
+   javaMainClass = "com.crystal.Main"
+}
+ 
+application {
+    mainClassName = javaMainClass
+}
+
+run{
+ standardInput = System.in
+}
+
+sourceSets {
+    main {
+         java {
+            srcDirs = ['src/main/java']
+         }
+    }
+}
+
+compileJava {
+    options.incremental = true
+    options.fork = true
+    options.failOnError = false
+}

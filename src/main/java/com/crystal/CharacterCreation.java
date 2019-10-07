@@ -1,6 +1,5 @@
 package com.crystal;
 
-import main.Man;
 import java.util.Scanner;
 
 public class CharacterCreation {
