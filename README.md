@@ -10,6 +10,9 @@ Updates during Hacktoberfest, contributors:
 - melascuco
 - saguins
 - SinSentido
+- barbaraips
+- ashatch
+- DGKSK8LIFE
 
 ## How to run
 
