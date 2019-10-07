@@ -14,7 +14,7 @@ and then to run the project:
 java com.crystal.Main
 ```
 
-Updates during Hacktoberfest, contributors:
+# Updates during Hacktoberfest, contributors:
 
 - RitikRawat
 - melascuco
@@ -23,7 +23,8 @@ Updates during Hacktoberfest, contributors:
 - barbaraips
 - ashatch
 - DGKSK8LIFE
-- AlexDvorak 
+- AlexDvorak
+- petr7555
 
 ## How to run
 
