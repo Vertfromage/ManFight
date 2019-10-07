@@ -1,7 +1,7 @@
 package com.crystal;
 
 public interface Character {
-    void isInjured(String attack);
+    void receiveDamage(String attack);
 
     boolean isDead();
 
@@ -13,12 +13,5 @@ public interface Character {
 
     void setScared(boolean scared);
 
-    boolean kick(Character characterBeingAttacked);
-
-    boolean punch(Character characterBeingAttacked);
-
-    boolean headbutt(Character characterBeingAttacked);
-
-    boolean roar(Character characterBeingAttacked);
-
+    boolean attack(String move, Character characterBeingAttacked);
 }

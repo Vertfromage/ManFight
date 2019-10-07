@@ -31,7 +31,7 @@ public class Fighter implements Character {
     }
 
     @Override
-    public void isInjured(String attack) {
+    public void receiveDamage(String attack) {
         if (attack.equals("punch") && this.hasArms()) {
             System.out.println(this.getName() + ": 'Oww you broke my arm!'");
             this.arms--;
@@ -62,34 +62,52 @@ public class Fighter implements Character {
     }
 
     @Override
-    public boolean punch(Character characterBeingAttacked) {
+    public boolean attack(String move, Character characterBeingAttacked) {
+        if (this.isScared()) {
+            System.out.println(this.getName() + " is still scared! can't move!");
+            this.setScared(false);
+            return true;
+        }
+        switch (move) {
+            case "kick":
+                return kick(characterBeingAttacked);
+            case "punch":
+                return punch(characterBeingAttacked);
+            case "headbutt":
+                return headbutt(characterBeingAttacked);
+            case "roar":
+                return roar(characterBeingAttacked);
+            default:
+                System.out.println(move + " is not a valid move you skip your turn doofus!");
+                return true;
+        }
+    }
+
+    private boolean punch(Character characterBeingAttacked) {
         if (this.hasArms()) {
-            characterBeingAttacked.isInjured("punch");
+            characterBeingAttacked.receiveDamage("punch");
             return true;
         }
         System.out.println(this.getName() + ": I have no stinking arms!");
         return false;
     }
 
-    @Override
-    public boolean kick(Character characterBeingAttacked) {
+    private boolean kick(Character characterBeingAttacked) {
         if (this.hasLegs()) {
-            characterBeingAttacked.isInjured("kick");
+            characterBeingAttacked.receiveDamage("kick");
             return true;
         }
         System.out.println(this.getName() + ": I have no stinking legs!");
         return false;
     }
 
-    @Override
-    public boolean headbutt(Character characterBeingAttacked) {
-        characterBeingAttacked.isInjured("headbutt");
+    private boolean headbutt(Character characterBeingAttacked) {
+        characterBeingAttacked.receiveDamage("headbutt");
         return true;
     }
 
-    @Override
-    public boolean roar(Character characterBeingAttacked) {
-        characterBeingAttacked.isInjured("roar");
+    private boolean roar(Character characterBeingAttacked) {
+        characterBeingAttacked.receiveDamage("roar");
         return true;
     }
 

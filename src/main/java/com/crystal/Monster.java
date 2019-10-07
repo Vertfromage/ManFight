@@ -50,32 +50,17 @@ public class Monster implements Character {
     }
 
     @Override
-    public void isInjured(String attack) {
+    public boolean attack(String move, Character characterBeingAttacked) {
+        return false;
+    }
+
+    @Override
+    public void receiveDamage(String attack) {
 
     }
 
     @Override
     public boolean isDead() {
-        return false;
-    }
-
-    @Override
-    public boolean kick(Character characterBeingAttacked) {
-        return false;
-    }
-
-    @Override
-    public boolean punch(Character characterBeingAttacked) {
-        return false;
-    }
-
-    @Override
-    public boolean headbutt(Character characterBeingAttacked) {
-        return false;
-    }
-
-    @Override
-    public boolean roar(Character characterBeingAttacked) {
         return false;
     }
 }

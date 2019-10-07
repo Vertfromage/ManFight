@@ -39,7 +39,7 @@ public class ManFight {
                     System.out.println("You quit!");
                     break;
                 }
-                if (!doMove(goodMove, this.getGoodMan(), this.getBadMan())) {
+                if (!this.getGoodMan().attack(goodMove, this.getBadMan())) {
                     System.out.println(this.getGoodMan().getName() + " is out of moves! " + this.getGoodMan().getName() + " has lost!");
                     break;
                 }
@@ -53,7 +53,7 @@ public class ManFight {
                     System.out.println("You quit!");
                     break;
                 }
-                if (!doMove(badMove, this.getBadMan(), this.getGoodMan())) {
+                if (!this.getBadMan().attack(badMove, this.getGoodMan())) {
                     System.out.println(this.getBadMan().getName() + " is out of moves! " + this.getBadMan().getName() + " has lost!");
                     break;
                 }
@@ -69,43 +69,6 @@ public class ManFight {
         }
         System.out.println("Game over!");
         scanner.close();
-    }
-
-    public boolean doMove(String move, Character manAttacking, Character characterBeingAttacked) {
-        if (manAttacking.isScared()) {
-            System.out.println(manAttacking.getName() + " is still scared! can't move!");
-            manAttacking.setScared(false);
-            return true;
-        }
-        if (manAttacking instanceof Magician) {
-            boolean hasMagicWand = doMoveAsMagician(move, (Magician) manAttacking);
-            if (!hasMagicWand) {
-                return false;
-            }
-        }
-        switch (move) {
-            case "kick":
-                return manAttacking.kick(characterBeingAttacked);
-            case "punch":
-                return manAttacking.punch(characterBeingAttacked);
-            case "headbutt":
-                return manAttacking.headbutt(characterBeingAttacked);
-            case "roar":
-                return manAttacking.roar(characterBeingAttacked);
-            default:
-                System.out.println(move + " is not a valid move you skip your turn doofus!");
-                return true;
-        }
-    }
-
-    public boolean doMoveAsMagician(String move, Magician manAttacking) {
-        if (manAttacking.hasMagicWand()) {
-            System.out.println(manAttacking.getName() + " is casting " + move + "!");
-            return true;
-        } else {
-            System.out.println(manAttacking.getName() + ": 'I lost my magic wand. so I can't fight you.'");
-            return false;
-        }
     }
 }
 

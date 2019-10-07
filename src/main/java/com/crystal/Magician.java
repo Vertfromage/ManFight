@@ -8,7 +8,7 @@ public class Magician implements Character {
     private String name;
     private boolean hasMagicWand;
 
-    public Magician(String name) {
+    Magician(String name) {
         this.arms = 2;
         this.legs = 2;
         this.hasBalls = true;
@@ -33,7 +33,7 @@ public class Magician implements Character {
     }
 
     @Override
-    public void isInjured(String attack) {
+    public void receiveDamage(String attack) {
         int randomNum = (int) (Math.random() * ((3 - 0) + 3)) + 0;
         if (randomNum == 0) {
             System.out.println(this.getName() + ": 'Oh no! my magic wand is broken!'");
@@ -53,38 +53,18 @@ public class Magician implements Character {
     }
 
     @Override
-    public boolean punch(Character characterBeingAttacked) {
-        if (this.hasArms()) {
-            characterBeingAttacked.isInjured("punch");
+    public boolean attack(String move, Character characterBeingAttacked) {
+        if (this.hasMagicWand()) {
+            System.out.println(this.getName() + " is casting " + move + "!");
+            characterBeingAttacked.receiveDamage(move);
             return true;
+        } else {
+            System.out.println(this.getName() + ": 'I lost my magic wand. so I can't fight you.'");
+            return false;
         }
-        System.out.println(this.getName() + ": I have no stinking arms!");
-        return false;
     }
 
-    @Override
-    public boolean kick(Character characterBeingAttacked) {
-        if (this.hasLegs()) {
-            characterBeingAttacked.isInjured("kick");
-            return true;
-        }
-        System.out.println(this.getName() + ": I have no stinking legs!");
-        return false;
-    }
-
-    @Override
-    public boolean headbutt(Character characterBeingAttacked) {
-        characterBeingAttacked.isInjured("headbutt");
-        return true;
-    }
-
-    @Override
-    public boolean roar(Character characterBeingAttacked) {
-        characterBeingAttacked.isInjured("roar");
-        return true;
-    }
-
-    public boolean hasBalls() {
+    private boolean hasBalls() {
         return hasBalls;
     }
 
@@ -92,15 +72,15 @@ public class Magician implements Character {
         return name;
     }
 
-    public boolean hasMagicWand() {
+    private boolean hasMagicWand() {
         return hasMagicWand;
     }
 
-    public boolean hasArms() {
+    private boolean hasArms() {
         return this.arms > 0;
     }
 
-    public boolean hasLegs() {
+    private boolean hasLegs() {
         return this.legs > 0;
     }
 }
