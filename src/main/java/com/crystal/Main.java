@@ -2,21 +2,24 @@ package com.crystal;
 
 public class Main {
 
-	public static void main(String[] args) {
-	Man Mike = CharacterCreation.CreateCharacter();
-	Man Hercules = new Man("Hercules");
-	Man Robert = new Man("Robert", "Magician");
+    public static void main(String[] args) {
+        //User creates a Mike character, who is either Fighter or Magician.
+        Man user = CharacterCreation.CreateCharacter();
 
-	int randomNum = (int)(Math.random() * ((1 - 0) + 1)) + 0;
-	switch(randomNum){
-		case 0:
-			ManFight mikeAndHercules = new ManFight(Mike, Hercules);
-			mikeAndHercules.startFight();
-			break;
-		case 1:
-			ManFight mikeAndRobert = new ManFight(Mike, Robert);
-			mikeAndRobert.startFight();
-			break;
-		}
+        //Computer creates either Hercules the Fighter or Robert the Magician
+        int randomNum = (int) (Math.random() * ((1 - 0) + 1)) + 0;
+        Man opponent;
+        switch (randomNum) {
+            case 0:
+                opponent = new Man("Hercules", ManClass.FIGHTER);
+                break;
+            case 1:
+                opponent = new Man("Robert", ManClass.MAGICIAN);
+                break;
+            default:
+                opponent = new Man("Hercules", ManClass.FIGHTER);
+        }
+        ManFight fight = new ManFight(user, opponent);
+        fight.startFight();
     }
 }
