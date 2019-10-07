@@ -1,10 +1,11 @@
 package com.crystal;
 
-public class Monster {
+//TODO finish this class
+public class Monster implements Character {
     private int eyes;
     private int tentacles;
     private String name;
-
+    private boolean scared;
 
     public Monster(String name, int eyes, int tentacles) {
         this.name = name;
@@ -25,5 +26,56 @@ public class Monster {
         if (eyes > 5) {
             System.out.println("all-seeing behemoth");
         }
+    }
+
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public String getClassName() {
+        return "Monster";
+    }
+
+    @Override
+    public boolean isScared() {
+        return scared;
+    }
+
+    @Override
+    public void setScared(boolean scared) {
+        this.scared = scared;
+    }
+
+    @Override
+    public void isInjured(String attack) {
+
+    }
+
+    @Override
+    public boolean isDead() {
+        return false;
+    }
+
+    @Override
+    public boolean kick(Character characterBeingAttacked) {
+        return false;
+    }
+
+    @Override
+    public boolean punch(Character characterBeingAttacked) {
+        return false;
+    }
+
+    @Override
+    public boolean headbutt(Character characterBeingAttacked) {
+        return false;
+    }
+
+    @Override
+    public boolean roar(Character characterBeingAttacked) {
+        return false;
     }
 }

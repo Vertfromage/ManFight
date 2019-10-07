@@ -3,19 +3,19 @@ package com.crystal;
 import java.util.Scanner;
 
 public class ManFight {
-    private Man goodMan;
-    private Man badMan;
+    private Character goodMan;
+    private Character badMan;
 
-    public ManFight(Man goodMan, Man badMan) {
+    public ManFight(Character goodMan, Character badMan) {
         this.goodMan = goodMan;
         this.badMan = badMan;
     }
 
-    public Man getGoodMan() {
+    public Character getGoodMan() {
         return goodMan;
     }
 
-    public Man getBadMan() {
+    public Character getBadMan() {
         return badMan;
     }
 
@@ -25,8 +25,8 @@ public class ManFight {
         System.out.println("You may punch, kick, headbutt or roar!");
         System.out.println("Type 'quit' to exit.");
         System.out.println("-------------------------------------------------------");
-        System.out.println(this.getGoodMan().getName() + " the " + this.getGoodMan().getManClass().getClassName() + " VS "
-                + this.getBadMan().getName() + " the " + this.getBadMan().getManClass().getClassName());
+        System.out.println(this.getGoodMan().getName() + " the " + this.getGoodMan().getClassName() + " VS "
+                + this.getBadMan().getName() + " the " + this.getBadMan().getClassName());
         System.out.println("-------------------------------------------------------");
 
         while (!this.getBadMan().isDead() && !this.getGoodMan().isDead()) {
@@ -71,34 +71,34 @@ public class ManFight {
         scanner.close();
     }
 
-    public boolean doMove(String move, Man manAttacking, Man manBeingAttacked) {
+    public boolean doMove(String move, Character manAttacking, Character characterBeingAttacked) {
         if (manAttacking.isScared()) {
             System.out.println(manAttacking.getName() + " is still scared! can't move!");
             manAttacking.setScared(false);
             return true;
         }
-        if (manAttacking.getManClass() == ManClass.MAGICIAN) {
-            boolean hasMagicWand = doMoveAsMagician(move, manAttacking);
+        if (manAttacking instanceof Magician) {
+            boolean hasMagicWand = doMoveAsMagician(move, (Magician) manAttacking);
             if (!hasMagicWand) {
                 return false;
             }
         }
         switch (move) {
             case "kick":
-                return manAttacking.kick(manBeingAttacked);
+                return manAttacking.kick(characterBeingAttacked);
             case "punch":
-                return manAttacking.punch(manBeingAttacked);
+                return manAttacking.punch(characterBeingAttacked);
             case "headbutt":
-                return manAttacking.headbutt(manBeingAttacked);
+                return manAttacking.headbutt(characterBeingAttacked);
             case "roar":
-                return manAttacking.roar(manBeingAttacked);
+                return manAttacking.roar(characterBeingAttacked);
             default:
                 System.out.println(move + " is not a valid move you skip your turn doofus!");
                 return true;
         }
     }
 
-    public boolean doMoveAsMagician(String move, Man manAttacking) {
+    public boolean doMoveAsMagician(String move, Magician manAttacking) {
         if (manAttacking.hasMagicWand()) {
             System.out.println(manAttacking.getName() + " is casting " + move + "!");
             return true;
