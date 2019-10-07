@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CharacterCreation {
     static Scanner kbd = new Scanner(System.in);
 
-    public static Man CreateCharacter() {
+    public static Character CreateCharacter() {
         int choose;
 
         System.out.printf("Choose your class:%n"
@@ -19,18 +19,18 @@ public class CharacterCreation {
             case 1:
                 return CreateFighter();
             case 2:
-                return CreateWizard();
+                return CreateMagician();
         }
         //In case the user doesn't choose a valid option it creates a fighter.
         return CreateFighter();
     }
 
-    private static Man CreateFighter() {
-        return new Man(askForName(), ManClass.FIGHTER);
+    private static Character CreateFighter() {
+        return new Fighter(askForName());
     }
 
-    private static Man CreateWizard() {
-        return new Man(askForName(), ManClass.MAGICIAN);
+    private static Character CreateMagician() {
+        return new Magician(askForName());
     }
 
     private static String askForName() {
