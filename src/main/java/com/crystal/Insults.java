@@ -61,5 +61,14 @@ public class Insults {
         }
         return "No insult found.";
     }
-
 }
+
+/* 
+Note from Steve, who wrote a simpler version of the insults class and added many insults to the file.
+---
+I am a complete beginner but wanted to help. I don't know if I have the skill to implement insults into manfight, 
+but I can definitely add insults. I'm not sure if this is the best way to do this, but I think a string array would probably 
+work best. 
+My plan is to use an array and the random class from math to generate a random number which will be used to retrieve the insult 
+stored in that array. 
+--Steve T (Selsec). */
