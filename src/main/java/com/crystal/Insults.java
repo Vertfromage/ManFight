@@ -9,7 +9,15 @@ public class Insults {
      * This class has lists of insults of varying severity, insults should be effective against man and wizards,
      * but not against monsters. Weak insult makes opponent laugh and improves health.
      */
-    static int severityOfInsult;
+    private int severityOfInsult;
+    private String insult;
+    
+    public Insults() {
+    	this.insult = pickInsult();
+    	this.severityOfInsult = (int) (Math.random() * ((3 - 1) + 1)) + 1;
+    }
+   
+    
     // Childish insults that a child would say.
     static List<String> weakInsults = Arrays.asList(
             "You're a poo!", "You're mean.",
@@ -39,29 +47,27 @@ public class Insults {
             "Villain, I have done thy mother!",
             "You obtuse piece of flotsam!",
             "You're a stuck up, half witted, scruffy looking nerf herder!",
-            "Do hurry up. A hamster with a blunt penknife would do it quicker.");
+            "Do hurry up. A hamster with a blunt penknife would do it quicker.", "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!");
     ;
 
-    // methods
-// prints insult and returns severityOfInsult
-    public static int sayInsult() {
-        severityOfInsult = (int) (Math.random() * 3);
-        System.out.println(pickInsult(severityOfInsult));
-        return severityOfInsult;
-    }
+    // getters
+    public int getSeverityOfInsult() {
+		return this.severityOfInsult;
+	}
+    
+	public String getInsult() {
+		return this.insult;
+	}
 
     // picks the insult randomly from list based on severity
-    public static String pickInsult(int severityOfInsult) {
-
-        switch (severityOfInsult) {
-            case 0:
-                return weakInsults.get((int) (Math.random() * weakInsults.size()-1));
-            case 1:
-                return meanInsults.get((int) (Math.random() * weakInsults.size()-1));
-            case 2:
+    private String pickInsult() {
+        if (this.severityOfInsult == 1) {
+        	return weakInsults.get((int) (Math.random() * weakInsults.size()-1));
+        } else if (this.severityOfInsult == 2) {   
+        	return meanInsults.get((int) (Math.random() * weakInsults.size()-1));
+        } else {
                 return awesomeInsults.get((int) (Math.random() * weakInsults.size()-1));
         }
-        return "No insult found.";
     }
 }
 
