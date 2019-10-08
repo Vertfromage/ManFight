@@ -42,11 +42,10 @@ meanInsults = Arrays.asList("Is that your face or your ass?",
 
 // Funny insults from movies, books, famous people. 
 awesomeInsults = Arrays.asList("Your father smells like elderberries and your mother is related to hamsters.", 
-"Thou art a boil, a plague sore, an embossed carbuncle in my corrupted blood."  );
+"Thou art a boil, a plague sore, an embossed carbuncle in my corrupted blood.", "Villain, I have done thy mother!"  );
 }
 
 /** Insult's origin for reference:
 "Your father smells like elderberries and your mother is related to hamsters." - Monty Python
 “Thou art a boil, a plague sore, an embossed carbuncle in my corrupted blood.” - King Lear, Shakespeare
  */
- 
