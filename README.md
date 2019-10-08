@@ -14,8 +14,9 @@ and then to run the project:
 java com.crystal.Main
 ```
 
-# Updates during Hacktoberfest, contributors:
+This game has been improved a ton since I opened it up for hacktoberfest, I love that no one has made me feel bad for being a newbie with sloppy code and poor github skills. Everyone who has contributed to this game I just want to say thatthis has been a really fun experience so far, and I'm looking forward to the rest of the month. 
 
+# Updates during Hacktoberfest, contributors:
 - RitikRawat
 - melascuco
 - saguins
@@ -25,6 +26,7 @@ java com.crystal.Main
 - DGKSK8LIFE
 - AlexDvorak
 - petr7555
+- shicker 
 
 ## How to run
 
