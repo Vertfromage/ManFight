@@ -14,6 +14,8 @@ public class Insults {
     static List<String> weakInsults = Arrays.asList(
             "You're a poo!", "You're mean.",
             "If I had a face like yours, I'd sue my parents.",
+            "Hey Dumb-ass,Don't you have a brain or what?",
+            "Do you know what?,You Sucks!! HAHAHAHA",
             "Every time you talk I hear that sound that plays when Pacman dies.",
             "I don't know what makes you so stupid, but it really works.",
             "All right, I’ll confess… I confess you’re a bigger idiot than I thought you were!",
