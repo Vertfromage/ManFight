@@ -26,7 +26,8 @@ This game has been improved a ton since I opened it up for hacktoberfest, I love
 - DGKSK8LIFE
 - AlexDvorak
 - petr7555
-- shicker 
+- shicker
+- Shashank-Jha
 
 ## How to run
 
