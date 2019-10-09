@@ -47,8 +47,8 @@ public class Insults {
             "Villain, I have done thy mother!",
             "You obtuse piece of flotsam!",
             "You're a stuck up, half witted, scruffy looking nerf herder!",
-            "Do hurry up. A hamster with a blunt penknife would do it quicker.", "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!");
-    ;
+            "Do hurry up. A hamster with a blunt penknife would do it quicker.",
+	    "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!");
 
     // getters
     public int getSeverityOfInsult() {
@@ -64,9 +64,9 @@ public class Insults {
         if (this.severityOfInsult == 1) {
         	return weakInsults.get((int) (Math.random() * weakInsults.size()-1));
         } else if (this.severityOfInsult == 2) {   
-        	return meanInsults.get((int) (Math.random() * weakInsults.size()-1));
+        	return meanInsults.get((int) (Math.random() * meanInsults.size()-1));
         } else {
-                return awesomeInsults.get((int) (Math.random() * weakInsults.size()-1));
+                return awesomeInsults.get((int) (Math.random() * awesomeInsults.size()-1));
         }
     }
 }
