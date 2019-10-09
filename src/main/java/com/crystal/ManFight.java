@@ -22,7 +22,7 @@ public class ManFight {
     public void startFight() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the fight club!");
-        System.out.println("You may punch, kick, headbutt or roar!");
+        System.out.println("You may punch, insult,  kick, headbutt or roar!");
         System.out.println("Type 'quit' to exit.");
         System.out.println("-------------------------------------------------------");
         System.out.println(this.getGoodMan().getName() + " the " + this.getGoodMan().getClassName() + " VS "
@@ -31,7 +31,7 @@ public class ManFight {
 
         while (!this.getBadMan().isDead() && !this.getGoodMan().isDead()) {
             //Ask first player what he wants to do;
-            System.out.println(this.getGoodMan().getName() + " What's your move?");
+            System.out.println(this.getGoodMan().getName() + ", what's your move?");
             //input
             if (scanner.hasNextLine()) {
                 String goodMove = scanner.nextLine();
@@ -46,7 +46,7 @@ public class ManFight {
             } else {
                 System.out.println("Not a valid input, you skip your turn");
             }
-            System.out.println(this.getBadMan().getName() + " What's your move?");
+            System.out.println(this.getBadMan().getName() + ", what's your move?");
             if (scanner.hasNextLine()) {
                 String badMove = scanner.nextLine();
                 if (badMove.equals("quit")) {

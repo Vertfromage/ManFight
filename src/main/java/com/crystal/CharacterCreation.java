@@ -6,19 +6,28 @@ public class CharacterCreation {
     static Scanner kbd = new Scanner(System.in);
 
     public static Character CreateCharacter() {
-        int choose;
 
-        System.out.printf("Choose your class:%n"
-                + "1. Fighter%n"
-                + "2. Magician%n");
-        choose = kbd.nextInt();
-        kbd.nextLine(); //clean buffer
+        
+        String choose = null;
+        boolean validInput = false;
+        while (!validInput) {
+        	try {
+        		System.out.printf("Choose your class:%n"
+                        + "1. Fighter%n"
+                        + "2. Magician%n");
+        		choose = kbd.nextLine();
+        		if (choose.equals("1") || choose.equals("2")) {
+        		validInput = true;
+        		}
+        	} catch (Exception e) {
+        	}
+        }
 
         switch (choose) {
 
-            case 1:
+            case "1":
                 return CreateFighter();
-            case 2:
+            case "2":
                 return CreateMagician();
         }
         //In case the user doesn't choose a valid option it creates a fighter.
