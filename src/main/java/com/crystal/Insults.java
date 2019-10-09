@@ -32,6 +32,7 @@ public class Insults {
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
             "Is that your face or your ass?",
+	    "Just quit being yourself.",
             "Do you want me to call your mom to pick you up before you get hurt?",
             "If I ever said anything to offend you, it was purely intentional.",
             "I'm really jealous of everyone that hasn't met you!",
@@ -48,6 +49,7 @@ public class Insults {
             "You obtuse piece of flotsam!",
             "You're a stuck up, half witted, scruffy looking nerf herder!",
             "Do hurry up. A hamster with a blunt penknife would do it quicker.",
+	    "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.",
 	    "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!");
 
     // getters
