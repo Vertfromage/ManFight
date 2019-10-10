@@ -30,12 +30,13 @@ public class Insults {
             "Please shut your mouth when you’re talking to me.",
 			      "You Dog", "You're ass, and you're pee and Santa Claus will not bring you presents!",
             "Please shut your mouth when you’re talking to me.",
-            "Are you really idiotic, or are you pretending to be so ?"
+            "Are you really idiotic, or are you pretending to be so ?",
+            "You smell like cabbage!"
     );
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
             "Is that your face or your ass?",
-	           "Just quit being yourself.",
+            "Just quit being yourself.",
             "Do you want me to call your mom to pick you up before you get hurt?",
             "If I ever said anything to offend you, it was purely intentional.",
             "I'm really jealous of everyone that hasn't met you!",
@@ -46,7 +47,9 @@ public class Insults {
             "Some babies were dropped on their heads but you were clearly thrown at a wall!",
             "They say opposites attract. I hope you meet someone who is good-looking, intelligent, and cultured.",
             "You are Nothing, you are a FOOL and you are a waste of time",
-	          "I'm really busy right now, can I ignore you some other time ?"
+            "I'm really busy right now, can I ignore you some other time ?",
+            "They say 'What you don't know can't hurt you' - You must be invincible!",
+            "Looks like someone woke up on the wrong side of the cage"
     );
     static List<String> awesomeInsults = Arrays.asList("Your father smells like elderberries and your mother is related to hamsters.",
             "Thou art a boil, a plague sore, an embossed carbuncle in my corrupted blood.",
@@ -56,7 +59,9 @@ public class Insults {
             "Do hurry up. A hamster with a blunt penknife would do it quicker.",
 	          "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.", "You suck, I bet your name is Kevin",
 	          "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
-            "Shut up and put the calabash in your ass! I know this is not impossible and you would enjoy it!");
+            "Shut up and put the calabash in your ass! I know this is not impossible and you would enjoy it!",
+            "Ever heard of this new revolutionary birth control method? It's called your face"
+    );
 
     // getters
     public int getSeverityOfInsult() {
