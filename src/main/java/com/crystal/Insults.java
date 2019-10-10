@@ -28,6 +28,7 @@ public class Insults {
             "I don't know what makes you so stupid, but it really works.",
             "All right, I’ll confess… I confess you’re a bigger idiot than I thought you were!",
             "Please shut your mouth when you’re talking to me."
+            "Are you really idiotic, or are you pretending to be so ?"
     );
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
@@ -42,6 +43,7 @@ public class Insults {
             "Why don't you slip into something more comfortable... like a coma.",
             "Some babies were dropped on their heads but you were clearly thrown at a wall!",
             "They say opposites attract. I hope you meet someone who is good-looking, intelligent, and cultured."
+	    "I'm really busy right now, can I ignore you some other time ?"
     );
     static List<String> awesomeInsults = Arrays.asList("Your father smells like elderberries and your mother is related to hamsters.",
             "Thou art a boil, a plague sore, an embossed carbuncle in my corrupted blood.",
