@@ -41,7 +41,8 @@ public class Insults {
             "If you had any more tawdry quirks, you could open up a Tawdry Quirk Shop.",
             "Why don't you slip into something more comfortable... like a coma.",
             "Some babies were dropped on their heads but you were clearly thrown at a wall!",
-            "They say opposites attract. I hope you meet someone who is good-looking, intelligent, and cultured."
+            "They say opposites attract. I hope you meet someone who is good-looking, intelligent, and cultured.",
+            "You are Nothing, you are a FOOL and you are a waste of time"
     );
     static List<String> awesomeInsults = Arrays.asList("Your father smells like elderberries and your mother is related to hamsters.",
             "Thou art a boil, a plague sore, an embossed carbuncle in my corrupted blood.",
@@ -50,7 +51,8 @@ public class Insults {
             "You're a stuck up, half witted, scruffy looking nerf herder!",
             "Do hurry up. A hamster with a blunt penknife would do it quicker.",
 	    "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.", "You suck, I bet your name is Kevin",
-	    "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!");
+	    "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
+            "Shut up and put the calabash in your ass! I know this is not impossible and you would enjoy it!");
 
     // getters
     public int getSeverityOfInsult() {
