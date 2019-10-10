@@ -49,7 +49,7 @@ public class Insults {
             "You obtuse piece of flotsam!",
             "You're a stuck up, half witted, scruffy looking nerf herder!",
             "Do hurry up. A hamster with a blunt penknife would do it quicker.",
-	    "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.",
+	    "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.", "You suck, I bet your name is Kevin",
 	    "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!");
 
     // getters
