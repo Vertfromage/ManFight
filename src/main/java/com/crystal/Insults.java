@@ -27,7 +27,8 @@ public class Insults {
             "Every time you talk I hear that sound that plays when Pacman dies.",
             "I don't know what makes you so stupid, but it really works.",
             "All right, I’ll confess… I confess you’re a bigger idiot than I thought you were!",
-            "Please shut your mouth when you’re talking to me."
+            "Please shut your mouth when you’re talking to me.",
+			"You Dog", "You're gay!", "You're ass, and you're pee and Santa Claus will not bring you presents!";
     );
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
