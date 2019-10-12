@@ -29,13 +29,13 @@ public class Insults {
             "All right, I’ll confess… I confess you’re a bigger idiot than I thought you were!",
             "Please shut your mouth when you’re talking to me.",
             "You Dog", "You're ass, and you're pee and Santa Claus will not bring you presents!",
-            "Please shut your mouth when you’re talking to me.",
             "Are you really idiotic, or are you pretending to be so ?",
             "You smell like doodoo!",
-            "You are uninvited from my birthday party!",
             "So is your face.",
             "You’re as useless as the \"Ay\" in \"Okay\"",
-            "You smell like cabbage!"
+            "You smell like cabbage!",
+            "Stop breathing my air!",
+            "Don't let the door hit you on the way out"
     );
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
@@ -56,7 +56,8 @@ public class Insults {
             "YOU’RE NOT INVITED TO MY BIRTHDAY PARTY !!!",
             "Stupidity is not a crime, so you are free to go",
             "They say 'What you don't know can't hurt you' - You must be invincible!",
-            "Looks like someone woke up on the wrong side of the cage"
+            "Looks like someone woke up on the wrong side of the cage",
+            "You are ARSCH MIT OHREN!"
     );
   
     static List<String> awesomeInsults = Arrays.asList("Your father smells like elderberries and your mother is related to hamsters.",
