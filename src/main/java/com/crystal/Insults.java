@@ -13,8 +13,8 @@ public class Insults {
     private String insult;
     
     public Insults() {
-    	this.insult = pickInsult();
-    	this.severityOfInsult = (int) (Math.random() * ((3 - 1) + 1)) + 1;
+        this.insult = pickInsult();
+        this.severityOfInsult = (int) (Math.random() * ((3 - 1) + 1)) + 1;
     }
    
     
@@ -28,14 +28,15 @@ public class Insults {
             "I don't know what makes you so stupid, but it really works.",
             "All right, I’ll confess… I confess you’re a bigger idiot than I thought you were!",
             "Please shut your mouth when you’re talking to me.",
-			      "You Dog", "You're ass, and you're pee and Santa Claus will not bring you presents!",
+            "You Dog", "You're ass, and you're pee and Santa Claus will not bring you presents!",
             "Please shut your mouth when you’re talking to me.",
-            "Are you really idiotic, or are you pretending to be so ?"
+            "Are you really idiotic, or are you pretending to be so ?",
+            "You’re as useless as the \"Ay\" in \"Okay\""
     );
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
             "Is that your face or your ass?",
-	           "Just quit being yourself.",
+            "Just quit being yourself.",
             "Do you want me to call your mom to pick you up before you get hurt?",
             "If I ever said anything to offend you, it was purely intentional.",
             "I'm really jealous of everyone that hasn't met you!",
@@ -46,7 +47,8 @@ public class Insults {
             "Some babies were dropped on their heads but you were clearly thrown at a wall!",
             "They say opposites attract. I hope you meet someone who is good-looking, intelligent, and cultured.",
             "You are Nothing, you are a FOOL and you are a waste of time",
-	          "I'm really busy right now, can I ignore you some other time ?"
+            "I'm really busy right now, can I ignore you some other time ?",
+            "Stupidity is not a crime, so you are free to go"
     );
     static List<String> awesomeInsults = Arrays.asList("Your father smells like elderberries and your mother is related to hamsters.",
             "Thou art a boil, a plague sore, an embossed carbuncle in my corrupted blood.",
@@ -54,25 +56,27 @@ public class Insults {
             "You obtuse piece of flotsam!",
             "You're a stuck up, half witted, scruffy looking nerf herder!",
             "Do hurry up. A hamster with a blunt penknife would do it quicker.",
-	          "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.", "You suck, I bet your name is Kevin",
-	          "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
-            "Shut up and put the calabash in your ass! I know this is not impossible and you would enjoy it!");
+            "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.", "You suck, I bet your name is Kevin",
+            "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
+            "Shut up and put the calabash in your ass! I know this is not impossible and you would enjoy it!",
+            "Of course I talk like an idiot, how else could you understand me?"
+    );
 
     // getters
     public int getSeverityOfInsult() {
-		return this.severityOfInsult;
-	}
+        return this.severityOfInsult;
+    }
     
-	public String getInsult() {
-		return this.insult;
-	}
+    public String getInsult() {
+        return this.insult;
+    }
 
     // picks the insult randomly from list based on severity
     private String pickInsult() {
         if (this.severityOfInsult == 1) {
-        	return weakInsults.get((int) (Math.random() * weakInsults.size()-1));
+            return weakInsults.get((int) (Math.random() * weakInsults.size()-1));
         } else if (this.severityOfInsult == 2) {   
-        	return meanInsults.get((int) (Math.random() * meanInsults.size()-1));
+            return meanInsults.get((int) (Math.random() * meanInsults.size()-1));
         } else {
                 return awesomeInsults.get((int) (Math.random() * awesomeInsults.size()-1));
         }
