@@ -13,8 +13,8 @@ public class Insults {
     private String insult;
     
     public Insults() {
-    	this.insult = pickInsult();
-    	this.severityOfInsult = (int) (Math.random() * ((3 - 1) + 1)) + 1;
+        this.insult = pickInsult();
+        this.severityOfInsult = (int) (Math.random() * ((3 - 1) + 1)) + 1;
     }
    
     
@@ -28,9 +28,10 @@ public class Insults {
             "I don't know what makes you so stupid, but it really works.",
             "All right, I’ll confess… I confess you’re a bigger idiot than I thought you were!",
             "Please shut your mouth when you’re talking to me.",
-			      "You Dog", "You're ass, and you're pee and Santa Claus will not bring you presents!",
+            "You Dog", "You're ass, and you're pee and Santa Claus will not bring you presents!",
             "Please shut your mouth when you’re talking to me.",
             "Are you really idiotic, or are you pretending to be so ?",
+            "You’re as useless as the \"Ay\" in \"Okay\"",
             "You smell like cabbage!"
     );
     // Mean but keep it pg13.
@@ -48,6 +49,7 @@ public class Insults {
             "They say opposites attract. I hope you meet someone who is good-looking, intelligent, and cultured.",
             "You are Nothing, you are a FOOL and you are a waste of time",
             "I'm really busy right now, can I ignore you some other time ?",
+            "Stupidity is not a crime, so you are free to go",
             "They say 'What you don't know can't hurt you' - You must be invincible!",
             "Looks like someone woke up on the wrong side of the cage"
     );
@@ -57,27 +59,29 @@ public class Insults {
             "You obtuse piece of flotsam!",
             "You're a stuck up, half witted, scruffy looking nerf herder!",
             "Do hurry up. A hamster with a blunt penknife would do it quicker.",
-	          "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.", "You suck, I bet your name is Kevin",
-	          "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
+
+            "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.", "You suck, I bet your name is Kevin",
+            "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
             "Shut up and put the calabash in your ass! I know this is not impossible and you would enjoy it!",
+            "Of course I talk like an idiot, how else could you understand me?",	 
             "Ever heard of this new revolutionary birth control method? It's called your face"
     );
 
     // getters
     public int getSeverityOfInsult() {
-		return this.severityOfInsult;
-	}
+        return this.severityOfInsult;
+    }
     
-	public String getInsult() {
-		return this.insult;
-	}
+    public String getInsult() {
+        return this.insult;
+    }
 
     // picks the insult randomly from list based on severity
     private String pickInsult() {
         if (this.severityOfInsult == 1) {
-        	return weakInsults.get((int) (Math.random() * weakInsults.size()-1));
+            return weakInsults.get((int) (Math.random() * weakInsults.size()-1));
         } else if (this.severityOfInsult == 2) {   
-        	return meanInsults.get((int) (Math.random() * meanInsults.size()-1));
+            return meanInsults.get((int) (Math.random() * meanInsults.size()-1));
         } else {
                 return awesomeInsults.get((int) (Math.random() * awesomeInsults.size()-1));
         }
