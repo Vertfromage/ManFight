@@ -11,13 +11,13 @@ public class Insults {
      */
     private int severityOfInsult;
     private String insult;
-    
+
     public Insults() {
         this.insult = pickInsult();
         this.severityOfInsult = (int) (Math.random() * ((3 - 1) + 1)) + 1;
     }
-   
-    
+
+
     // Childish insults that a child would say.
     static List<String> weakInsults = Arrays.asList(
             "You're a poo!", "You're mean.",
@@ -31,6 +31,9 @@ public class Insults {
             "You Dog", "You're ass, and you're pee and Santa Claus will not bring you presents!",
             "Please shut your mouth when you’re talking to me.",
             "Are you really idiotic, or are you pretending to be so ?",
+            "You smell like doodoo!",
+            "You are uninvited from my birthday party!",
+            "So is your face.",
             "You’re as useless as the \"Ay\" in \"Okay\"",
             "You smell like cabbage!"
     );
@@ -49,17 +52,19 @@ public class Insults {
             "They say opposites attract. I hope you meet someone who is good-looking, intelligent, and cultured.",
             "You are Nothing, you are a FOOL and you are a waste of time",
             "I'm really busy right now, can I ignore you some other time ?",
+            "I ain't got a momma, me and my dad share yours.",
+            "YOU’RE NOT INVITED TO MY BIRTHDAY PARTY !!!",
             "Stupidity is not a crime, so you are free to go",
             "They say 'What you don't know can't hurt you' - You must be invincible!",
             "Looks like someone woke up on the wrong side of the cage"
     );
+  
     static List<String> awesomeInsults = Arrays.asList("Your father smells like elderberries and your mother is related to hamsters.",
             "Thou art a boil, a plague sore, an embossed carbuncle in my corrupted blood.",
             "Villain, I have done thy mother!",
             "You obtuse piece of flotsam!",
             "You're a stuck up, half witted, scruffy looking nerf herder!",
             "Do hurry up. A hamster with a blunt penknife would do it quicker.",
-
             "You’re like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.", "You suck, I bet your name is Kevin",
             "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
             "Shut up and put the calabash in your ass! I know this is not impossible and you would enjoy it!",
@@ -71,7 +76,7 @@ public class Insults {
     public int getSeverityOfInsult() {
         return this.severityOfInsult;
     }
-    
+  
     public String getInsult() {
         return this.insult;
     }
@@ -80,20 +85,20 @@ public class Insults {
     private String pickInsult() {
         if (this.severityOfInsult == 1) {
             return weakInsults.get((int) (Math.random() * weakInsults.size()-1));
-        } else if (this.severityOfInsult == 2) {   
+        } else if (this.severityOfInsult == 2) {
             return meanInsults.get((int) (Math.random() * meanInsults.size()-1));
         } else {
-                return awesomeInsults.get((int) (Math.random() * awesomeInsults.size()-1));
+            return awesomeInsults.get((int) (Math.random() * awesomeInsults.size()-1));
         }
     }
 }
 
-/* 
+/*
 Note from Steve, who wrote a simpler version of the insults class and added many insults to the file.
 ---
-I am a complete beginner but wanted to help. I don't know if I have the skill to implement insults into manfight, 
-but I can definitely add insults. I'm not sure if this is the best way to do this, but I think a string array would probably 
-work best. 
-My plan is to use an array and the random class from math to generate a random number which will be used to retrieve the insult 
-stored in that array. 
+I am a complete beginner but wanted to help. I don't know if I have the skill to implement insults into manfight,
+but I can definitely add insults. I'm not sure if this is the best way to do this, but I think a string array would probably
+work best.
+My plan is to use an array and the random class from math to generate a random number which will be used to retrieve the insult
+stored in that array.
 --Steve T (Selsec). */
