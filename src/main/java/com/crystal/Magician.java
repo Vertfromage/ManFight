@@ -37,10 +37,10 @@ public class Magician implements Character {
         int randomNum = (int) (Math.random() * ((3 - 0) + 3)) + 0;
         if (randomNum == 0) {
             System.out.println(this.getName() + ": 'Oh no! my magic wand is broken!'");
-            System.out.println(this.getName() + ": 'My time has come.'");
+            System.out.println("\n" + this.getName() + ": 'My time has come.'");
             this.hasMagicWand = false;
         } else {
-            System.out.println(this.getName() + ": 'Useless!'");
+            System.out.println("\n" + this.getName() + ": 'Useless!'");
         }
     }
 
@@ -55,11 +55,11 @@ public class Magician implements Character {
     @Override
     public boolean attack(String move, Character characterBeingAttacked) {
         if (this.hasMagicWand()) {
-            System.out.println(this.getName() + " is casting " + move + "!");
+            System.out.println("\n" + this.getName() + " is casting " + move + "!");
             characterBeingAttacked.receiveDamage(move);
             return true;
         } else {
-            System.out.println(this.getName() + ": 'I lost my magic wand. so I can't fight you.'");
+            System.out.println("\n" + this.getName() + ": 'I lost my magic wand. so I can't fight you.'");
             return false;
         }
     }
