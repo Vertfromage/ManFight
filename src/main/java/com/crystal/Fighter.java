@@ -33,22 +33,22 @@ public class Fighter implements Character {
 	@Override
 	public void receiveDamage(String attack) {
 		if (attack.equals("punch") && this.hasArms()) {
-			System.out.println(this.getName() + ": 'Oww you broke my arm!'");
+			System.out.println("\n" + this.getName() + ": 'Oww you broke my arm!'");
 			this.arms--;
 		} else if (attack.equals("kick") && this.hasLegs()) {
-			System.out.println(this.getName() + ": 'Oww you broke my leg!'");
+			System.out.println("\n" + this.getName() + ": 'Oww you broke my leg!'");
 			this.legs--;
 		} else if (attack.equals("headbutt") && this.hasBalls()) {
-			System.out.println(this.getName() + ": 'Oww you got me in the Gronk Nuts!'");
+			System.out.println("\n" + this.getName() + ": 'Oww you got me in the Gronk Nuts!'\n");
 			this.hasBalls = false;
 		} else if (attack.equals("roar")) {
 			int randomNum = (int) (Math.random() * ((1 - 0) + 1)) + 0;
 			if (randomNum == 0) {
 				System.out.println(this.getName() + ": 'What?'");
-				System.out.println("Nothing happens!");
+				System.out.println("\n" + "Nothing happens!\n");
 			} else {
 				System.out.println(this.getName() + ": 'That's scary!'");
-				System.out.println(this.getName() + " is scared from your roar!!");
+				System.out.println("\n" + this.getName() + " is scared from your roar!!\n");
 				this.scared = true;
 			}
 		} else if (attack.equals("insult")) {
@@ -57,11 +57,11 @@ public class Fighter implements Character {
 			System.out.println(insultAttack.getInsult());
 
 			if (insultAttack.getSeverityOfInsult() == 1) {
-				System.out.println(this.getName() + " isn't scared at all! Hahaha!");
+				System.out.println("\n" + this.getName() + " isn't scared at all! Hahaha!");
 			} else if (insultAttack.getSeverityOfInsult() == 2) {
-				System.out.println("Ouch! That hurt, but " + this.getName() + " isn't scared!");
+				System.out.println("\n" + "Ouch! That hurt, but " + this.getName() + " isn't scared!");
 			} else {
-				System.out.println("You scared the shit out of " + this.getName() + "!");
+				System.out.println("\n" + "You scared the shit out of " + this.getName() + "!");
 				this.scared = true;
 			}
 		} else {
@@ -77,7 +77,7 @@ public class Fighter implements Character {
 	@Override
 	public boolean attack(String move, Character characterBeingAttacked) {
 		if (this.isScared()) {
-			System.out.println(this.getName() + " is still scared! can't move!");
+			System.out.println("\n" + this.getName() + " is still scared! can't move!");
 			this.scared = false;
 			return true;
 		}
@@ -93,7 +93,7 @@ public class Fighter implements Character {
 		case "insult":
 			return insult(characterBeingAttacked);
 		default:
-			System.out.println(move + " is not a valid move you skip your turn doofus!");
+			System.out.println("\n" + move + " is not a valid move you skip your turn doofus! \n");
 			return true;
 		}
 	}
@@ -103,7 +103,7 @@ public class Fighter implements Character {
 			characterBeingAttacked.receiveDamage("punch");
 			return true;
 		}
-		System.out.println(this.getName() + ": I have no stinking arms!");
+		System.out.println("\n" + this.getName() + ": I have no stinking arms!");
 		return false;
 	}
 
@@ -112,7 +112,7 @@ public class Fighter implements Character {
 			characterBeingAttacked.receiveDamage("kick");
 			return true;
 		}
-		System.out.println(this.getName() + ": I have no stinking legs!");
+		System.out.println("\n" + this.getName() + ": I have no stinking legs!");
 		return false;
 	}
 
