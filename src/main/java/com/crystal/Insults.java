@@ -35,7 +35,8 @@ public class Insults {
             "You’re as useless as the \"Ay\" in \"Okay\"",
             "You smell like cabbage!",
             "Stop breathing my air!",
-            "Don't let the door hit you on the way out"
+            "Don't let the door hit you on the way out",
+            "You have a pea for a brain"
     );
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
