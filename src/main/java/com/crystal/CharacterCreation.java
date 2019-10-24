@@ -12,6 +12,8 @@ public class CharacterCreation {
         boolean validInput = false;
         while (!validInput) {
         	try {
+        	    System.out.println("#############################################################################" +
+                        "##################################");
         		System.out.printf("Choose your class:%n"
                         + "1. Fighter%n"
                         + "2. Magician%n");
