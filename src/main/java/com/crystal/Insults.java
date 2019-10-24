@@ -37,7 +37,7 @@ public class Insults {
             "Stop breathing my air!",
             "Don't let the door hit you on the way out",
             "You have a pea for a brain",
-	    "you have a frog face"
+	        "you have a frog face"
     );
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
@@ -73,7 +73,7 @@ public class Insults {
             "Shut up and put the calabash in your ass! I know this is not impossible and you would enjoy it!",
             "Of course I talk like an idiot, how else could you understand me?",	 
             "Ever heard of this new revolutionary birth control method? It's called your face",
-	    "I'd beat thee, but I would infect my hands"
+	        "I'd beat thee, but I would infect my hands"
     );
 
     // getters
