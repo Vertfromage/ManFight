@@ -36,7 +36,8 @@ public class Insults {
             "You smell like cabbage!",
             "Stop breathing my air!",
             "Don't let the door hit you on the way out",
-            "You have a pea for a brain"
+            "You have a pea for a brain",
+	    "you have a frog face"
     );
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
@@ -71,7 +72,8 @@ public class Insults {
             "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
             "Shut up and put the calabash in your ass! I know this is not impossible and you would enjoy it!",
             "Of course I talk like an idiot, how else could you understand me?",	 
-            "Ever heard of this new revolutionary birth control method? It's called your face"
+            "Ever heard of this new revolutionary birth control method? It's called your face",
+	    "I'd beat thee, but I would infect my hands"
     );
 
     // getters
