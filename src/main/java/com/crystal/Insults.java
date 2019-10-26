@@ -37,6 +37,9 @@ public class Insults {
             "Stop breathing my air!",
             "Don't let the door hit you on the way out",
             "You have a pea for a brain",
+	      "Is that you, Medusa?",
+	      "Thank god I'm tall so I won't see your face",
+	      "You see that? It's your hope running away",
 	      "you have a frog face"
     );
     // Mean but keep it pg13.
