@@ -17,6 +17,8 @@ java com.crystal.Main
 This game has been improved a ton since I opened it up for hacktoberfest, I love that no one has made me feel bad for being a newbie with sloppy code and poor github skills. Everyone who has contributed to this game I just want to say thatthis has been a really fun experience so far, and I'm looking forward to the rest of the month. 
 
 # Updates during Hacktoberfest, contributors:
+
+## Contributed code:
 - RitikRawat
 - melascuco
 - saguins
@@ -28,6 +30,20 @@ This game has been improved a ton since I opened it up for hacktoberfest, I love
 - petr7555
 - shicker
 - Shashank-Jha
+- selsec
+- JessieVela
+## Contributed insults:
+- SubhamPramanik
+- jfsaaved
+- Bapego
+- sarathmohan2
+- LadySith
+- danmoren
+- burebistaxk
+- jacob-scheatzle
+- vincentvvv
+- clayt8
+- CBruno98
 
 ## How to run
 
