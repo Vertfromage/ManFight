@@ -37,7 +37,11 @@ public class Insults {
             "Stop breathing my air!",
             "Don't let the door hit you on the way out",
             "You have a pea for a brain",
-	      "you have a frog face"
+	      "Is that you, Medusa?",
+            "you have a frog face",
+	      "Thank god I'm tall so I won't see your face",
+	      "You see that? It's your hope running away"
+
     );
     // Mean but keep it pg13.
     static List<String> meanInsults = Arrays.asList(
